@@ -1,0 +1,75 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --color-cream: #F2EFE8;
+    --color-charcoal: #191919;
+    --color-muted: #6F6C66;
+    --color-border: #D4D0C7;
+    --color-reuse: #65785F;
+    --color-recycle: #637A83;
+    --color-downcycle: #9A7A52;
+    --color-disposal: #A64B32;
+  }
+
+  body {
+    background-color: #F2EFE8;
+    color: #191919;
+    font-family: 'Plus Jakarta Sans', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  }
+}
+
+.font-serif-editorial {
+  font-family: 'Instrument Serif', Georgia, Cambria, 'Times New Roman', Times, serif;
+}
+
+.font-mono-tag {
+  font-family: 'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+}
+
+/* Garment stitching styling */
+.border-stitched {
+  border-style: dashed;
+  border-width: 1.5px;
+  border-color: #D4D0C7;
+}
+
+.border-stitched-dark {
+  border-style: dashed;
+  border-width: 1.5px;
+  border-color: #6F6C66;
+}
+
+/* Care label aesthetic helper */
+.care-label {
+  background-color: #FAF8F5;
+  border: 1px solid #D4D0C7;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
+}
+
+/* Smooth continuous thread progress */
+.thread-progress {
+  transition: width 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* Animation utilities for restrained editorial motion */
+@keyframes floatGentle {
+  0%, 100% { transform: translateY(0px) rotate(0deg); }
+  50% { transform: translateY(-6px) rotate(0.5deg); }
+}
+
+.animate-float-gentle {
+  animation: floatGentle 6s ease-in-out infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .animate-float-gentle {
+    animation: none;
+  }
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}

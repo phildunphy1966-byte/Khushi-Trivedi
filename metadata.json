@@ -1,0 +1,6 @@
+{
+  "name": "The Afterlife of Clothes",
+  "description": "An interactive data-storytelling website following one unwanted T-shirt from a user's wardrobe into India's post-consumer textile-waste system.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
